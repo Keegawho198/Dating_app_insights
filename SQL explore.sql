@@ -5,14 +5,36 @@ SELECT *
 FROM dating;
 
 -- Project Name: "MatchMaster Insights"
+-- FOR learning purposes
+
 -- What is the average age of the users?
--- Hint: Use the AVG() function on the Age column.
+SELECT AVG(Age)
+FROM dating;
 
 -- What is the gender distribution of the users?
--- Hint: Use COUNT() and GROUP BY on the Gender column.
+SELECT COUNT(Gender)
+FROM dating
+GROUP BY gender;
+
+SELECT g.gender AS Gender, 
+       COUNT(d.gender) AS Count
+FROM (SELECT 'Male' AS gender 
+      UNION ALL 
+      SELECT 'Female') AS g
+LEFT JOIN dating AS d
+ON g.gender = d.gender
+GROUP BY g.gender;
+
 
 -- What are the most common interests among users?
--- Hint: Use COUNT() and GROUP BY on the Interests column. You might need to handle the list format if it’s stored as a single string.
+SELECT DISTINCT interests, COUNT(interests) AS count
+FROM dating
+GROUP BY interests
+ORDER BY count DESC;
+
+
+
+
 
 -- How many users are looking for Casual Dating vs. Marriage?
 -- Hint: Use COUNT() and GROUP BY on the Looking For column.

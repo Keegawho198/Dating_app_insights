@@ -1,5 +1,7 @@
 # Dating_app_insights
 
+for LEARNING Purposes
+
 This data analysis project aimed at exploring user behaviors, preferences, and demographic trends from a simulated dating app dataset using SQL. The objective of this project is to gain valuable insights into the user base by analyzing various factors such as age, gender, interests, relationship preferences, occupation, and more. The findings will be visualized using Python's Pandas library to make the data easily interpretable.
 
 # Methodology:
