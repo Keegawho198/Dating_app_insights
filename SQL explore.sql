@@ -1,6 +1,15 @@
 SELECT COUNT(*)
 FROM dating;
 
+-- remember to use back tick  -> ` <-
+ALTER TABLE dating
+RENAME COLUMN `Looking For` TO looking_for,
+RENAME COLUMN `Education Level` TO education,
+RENAME COLUMN `Swiping History` TO swiping_history,
+RENAME COLUMN `Frequency of Usage` TO freq_usage;
+
+
+
 SELECT *
 FROM dating;
 
@@ -34,10 +43,11 @@ ORDER BY count DESC;
 
 
 
-
-
 -- How many users are looking for Casual Dating vs. Marriage?
--- Hint: Use COUNT() and GROUP BY on the Looking For column.
+SELECT looking_for, COUNT(Looking_For)
+FROM dating
+GROUP BY looking_for;
+
 
 -- What is the most common occupation among users?
 -- Hint: Use COUNT() and GROUP BY on the Occupation column.

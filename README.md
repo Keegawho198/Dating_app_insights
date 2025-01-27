@@ -14,13 +14,23 @@ Visualization: Use Python's Pandas library to visualize the results, making the 
 # Dataset Overview: The dataset consists of the following columns:
 
 User ID: Unique identifier for each user.
+
 Age: Age of the user (range: 18-35 years).
+
 Gender: Gender of the user (Male/Female).
+
 Height: User's height in feet.
+
 Interests: A list of user interests (e.g., Sports, Reading, Movies).
+
 Looking For: The type of relationship the user is seeking (Casual Dating, Marriage).
+
 Children: Whether the user has children (Yes/No).
+
 Education Level: User's highest education qualification (High School, Ph.D.).
+
 Occupation: Current occupation of the user (e.g., Doctor, Engineer, Artist).
+
 Swiping History: Total number of swipes by the user.
+
 Frequency of Usage: How often the user uses the app (Daily, Weekly, Monthly).
