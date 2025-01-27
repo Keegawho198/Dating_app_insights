@@ -8,8 +8,6 @@ RENAME COLUMN `Education Level` TO education,
 RENAME COLUMN `Swiping History` TO swiping_history,
 RENAME COLUMN `Frequency of Usage` TO freq_usage;
 
-
-
 SELECT *
 FROM dating;
 
@@ -50,16 +48,40 @@ GROUP BY looking_for;
 
 
 -- What is the most common occupation among users?
--- Hint: Use COUNT() and GROUP BY on the Occupation column.
+SELECT occupation, COUNT(occupation) AS numb_of_job
+FROM dating
+GROUP BY occupation
+ORDER BY numb_of_job DESC;
+
 
 -- What is the average swiping history of users based on their frequency of usage?
 -- Hint: Use AVG() on the Swiping History column with GROUP BY on the Frequency of Usage column.
+SELECT  *
+FROM dating;
+
+SELECT  AVG(swiping_history) AS swipe_history
+FROM dating
+GROUP BY freq_usage;
+
+SELECT 
+    freq_usage,
+    AVG(swiping_history) AS swipe_history,
+    COUNT(*) AS total_users
+FROM dating
+GROUP BY freq_usage;
 
 -- How many users have children?
--- Hint: Use COUNT() and GROUP BY on the Children column.
+SELECT children, COUNT(children) AS count
+FROM dating
+GROUP BY children;
 
 -- What is the average height of users?
--- Hint: Use AVG() on the Height column.
+SELECT gender, AVG(height), COUNT(*) AS users
+FROM dating
+GROUP BY gender;
 
 -- What is the education level distribution among users?
 -- Hint: Use COUNT() and GROUP BY on the
+SELECT education, COUNT(education) AS count
+FROM dating
+GROUP BY education;
